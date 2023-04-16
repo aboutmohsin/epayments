@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
-import Instruction from "../PropertyInstruction/Instruction";
+import Instruction from "../Instruction/Instruction";
+
 const Form = () => {
   const [input, setInput] = useState({});
   const onValueChange = (e) => {
