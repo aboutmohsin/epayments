@@ -1,0 +1,22 @@
+.property__instruction {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 0 15px 0 #7e8083;
+  margin: 2rem 0;
+}
+.instruction__details > summary,
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.instruction__details > h2 {
+  padding: 1rem 0;
+}
+.instruction__details > li,
+p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 0.5rem 4rem;
+}
