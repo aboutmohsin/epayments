@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import "./Form.css";
 import Instruction from "../Instruction/Instruction";
+import { addUser } from "../../service/api";
 
 const Form = () => {
   const [input, setInput] = useState({});
   const onValueChange = (e) => {
     e.preventDefault();
     setInput({ ...input, [e.target.name]: e.target.value });
-    console.log(e.target.value);
+    console.log(input);
   };
-  const handelInput = (e) => {
-    console.log("add data successfully");
+  const addUserDetails = async () => {
+    await addUser(input);
   };
   return (
     <section className="form_sections">
@@ -27,7 +28,7 @@ const Form = () => {
                   pattern="[A-Za-z]"
                   color="red"
                   name="firstName"
-                  // value={input}
+                  placeholder="john"
                   onChange={(e) => onValueChange(e)}
                 />
               </div>
@@ -36,7 +37,7 @@ const Form = () => {
                 <input
                   type="text"
                   name="secondName"
-                  // value={input}
+                  placeholder="vick"
                   onChange={(e) => onValueChange(e)}
                 />
               </div>
@@ -45,7 +46,7 @@ const Form = () => {
                 <input
                   type="number"
                   name="phoneNo"
-                  // value={input}
+                  placeholder="03XXXXXXXXX"
                   onChange={(e) => onValueChange(e)}
                 />
               </div>
@@ -54,13 +55,14 @@ const Form = () => {
                 <input
                   type="email"
                   name="email"
-                  // value={input}
+                  placeholder="example@gmail.com"
                   onChange={(e) => onValueChange(e)}
+                  required
                 />
               </div>
             </div>
             <div className="btn">
-              <button onClick={handelInput}>Proceed to Payment</button>
+              <button onClick={addUserDetails}>Proceed to Payment</button>
             </div>
           </form>
         </div>
