@@ -17,14 +17,16 @@ Connection();
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// app.use(
+//   cors({
+//     origin: "http://localhost:5173",
+//     methods: ["GET,POST,PUT,DELETE"],
+//   })
+// );
+app.use(cors());
+app.options("*", cors());
 app.use("/", Router);
 
-app.use(
-  cors({
-    origin: "*",
-    methods: ["GET,POST,PUT,DELETE"],
-  })
-);
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () =>
   console.log(`Server is running successfull on PORT: ${PORT}`)
