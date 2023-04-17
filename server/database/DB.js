@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
 const Connection = async () => {
-  const URL = `process.env.DATABASE`;
+  const URL = `mongodb+srv://payment:payment@cluster0.qkth7x9.mongodb.net/?retryWrites=true&w=majority`;
   try {
-    await mongoose.connect(process.env.DATABASE, {
+    await mongoose.connect(URL, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
     });
