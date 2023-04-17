@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./Form.css";
 import Instruction from "../Instruction/Instruction";
-import { addUser } from "../../service/api";
+import { addUser } from "../../service/Api";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const [input, setInput] = useState({});
+  const navigate = useNavigate();
   const onValueChange = (e) => {
     e.preventDefault();
     setInput({ ...input, [e.target.name]: e.target.value });
@@ -12,6 +14,7 @@ const Form = () => {
   };
   const addUserDetails = async () => {
     await addUser(input);
+    navigate("/easypaisa");
   };
   return (
     <section className="form_sections">
@@ -62,14 +65,16 @@ const Form = () => {
               </div>
             </div>
             <div className="btn">
-              <button onClick={addUserDetails}>Proceed to Payment</button>
+              <button onClick={() => addUserDetails()}>
+                Proceed to Payment
+              </button>
             </div>
           </form>
         </div>
         <Instruction />
       </div>
     </section>
-  );  
+  );
 };
 
 export default Form;

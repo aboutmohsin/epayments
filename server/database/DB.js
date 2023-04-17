@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+dotenv.config();
 
 const Connection = async () => {
   const URL = `mongodb+srv://payment:payment@cluster0.qkth7x9.mongodb.net/?retryWrites=true&w=majority`;

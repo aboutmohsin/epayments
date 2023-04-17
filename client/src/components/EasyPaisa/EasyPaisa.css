@@ -1,0 +1,39 @@
+.easypaisa_cards {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 6px;
+  background: #fff;
+  /* box-shadow: 0 0 15px 0 #3263cd; */
+  box-shadow: 0 0 15px 0 #7e8083;
+}
+/* .container{
+    width: 100px;
+} */
+.qr_code {
+  display: flex;
+  justify-content: center;
+}
+.qr_code > img {
+  width: 20%;
+}
+.payment__screenshot > form {
+  padding: 0 2rem;
+  text-align: center;
+}
+.form_control label {
+  font-size: 1.4rem;
+  display: block;
+  color: #333;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-bottom: 7px;
+}
+.form_control input {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.payment_form .btn {
+}
