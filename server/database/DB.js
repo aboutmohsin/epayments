@@ -1,15 +1,16 @@
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
 const Connection = async () => {
-  const URL = `mongodb+srv://payment:payment@cluster0.qkth7x9.mongodb.net/?retryWrites=true&w=majority`;
+  const URL = `process.env.DATABASE`;
   try {
-    await mongoose.connect(URL, {
+    await mongoose.connect(process.env.DATABASE, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
     });
     console.log("connection established");
   } catch (error) {
-    console.log("Error whiel connecting with the database", error);
+    console.log("Error while connecting with the database", error);
   }
 };
 
