@@ -69,7 +69,7 @@ const Form = () => {
         <Instruction />
       </div>
     </section>
-  );
+  );  
 };
 
 export default Form;
