@@ -28,8 +28,8 @@ const Form = () => {
                 <label htmlFor="">First Name</label>
                 <input
                   type="text"
-                  pattern="[A-Za-z]"
-                  color="red"
+                  pattern="[Aa-zZ]"
+                  // color="red"
                   name="firstName"
                   placeholder="john"
                   onChange={(e) => onValueChange(e)}
