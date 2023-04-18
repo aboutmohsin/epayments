@@ -1,3 +1,28 @@
+.booking_details {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 6px;
+  background: #fff;
+  /* box-shadow: 0 0 15px 0 #3263cd; */
+  box-shadow: 0 0 15px 0 #7e8083;
+  margin-bottom: 2rem;
+}
+.booking_details > h1 {
+  font-size: 2.5rem;
+  padding: 1rem;
+  border-bottom: 2px solid #7e8083;
+}
+.user__details {
+  display: flex;
+  padding: 3rem 0;
+  gap: 2rem;
+  border-bottom: 2px solid #7e8083;
+}
+.user__details > p {
+  font-size: 2rem;
+  padding: 0;
+  gap: 3rem;
+}
 .easypaisa_cards {
   width: 100%;
   padding: 2rem;
@@ -34,4 +59,3 @@
   border-radius: 5px;
   width: 30%;
 }
-

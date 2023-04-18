@@ -1,9 +1,25 @@
 import React from "react";
 import "./EasyPaisa.css";
+import { getUser } from "../../service/Api";
 const EasyPaisa = () => {
   return (
     <section className="easypaisa_payment_section">
       <div className="container">
+        <div className="booking_details">
+          <h1>Your Booking Details</h1>
+          <div className="user__details">
+            <div className="user__titles">
+              <p>Full Name:</p>
+              <p>Email:</p>
+              <p>Phone Number:</p>
+            </div>
+            <div className="user__values">
+              <p>Mohsin Hassan</p>
+              <p>mohsin.hassan@gmail.com</p>
+              <p>+91 999999999</p>
+            </div>
+          </div>
+        </div>
         <div className="easypaisa_cards">
           <div className="qr_code">
             <img src="./images/qrcode.webp" alt="" />
