@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./EasyPaisa.css";
 import { getUser } from "../../service/Api";
 const EasyPaisa = () => {
+  const [users, setUser] = useState([]);
+  useEffect(() => {
+    getUserDetails();
+  }, []);
+  const getUserDetails = async () => {
+    let res = await getUser();
+    setUser(res.data);
+    // console.log(res.data);
+  };
   return (
     <section className="easypaisa_payment_section">
       <div className="container">
@@ -14,9 +23,18 @@ const EasyPaisa = () => {
               <p>Phone Number:</p>
             </div>
             <div className="user__values">
-              <p>Mohsin Hassan</p>
+              {
+                <>
+                  <p key={users.id}>
+                    {users.firstName + " " + users.secondName}
+                  </p>
+                  <p key={users.id}>{users.email}</p>
+                  <p key={users.id}>{users.phoneNo}</p>
+                </>
+              }
+              {/* <p>Mohsin Hassan</p>
               <p>mohsin.hassan@gmail.com</p>
-              <p>+91 999999999</p>
+              <p>+91 999999999</p> */}
             </div>
           </div>
         </div>

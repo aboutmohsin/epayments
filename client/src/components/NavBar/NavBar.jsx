@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 const NavBar = () => {
@@ -11,11 +11,24 @@ const NavBar = () => {
       id: "/easypaisa",
       title: "EasyPaisa",
     },
-    {
-      id: "/metamask",
-      title: "MetaMask",
-    },
+    // {
+    //   id: "/metamask",
+    //   title: "MetaMask",
+    // },
   ];
+  const [connectWallet, setConnectWallet] = useState("MetaMask");
+  const connectWalletHandler = () => {
+    if (window.ethereum) {
+      window.ethereum
+        .request({ method: "eth_requestAccounts" })
+        .then((result) => {
+          accountChangeHandler(result[0]);
+        });
+      console.log("MetaMask Connect Successfully");
+    } else {
+      setErrorMessage("Install MetaMasks");
+    }
+  };
   return (
     <section className="navbar_section">
       <div className="container">
@@ -26,6 +39,11 @@ const NavBar = () => {
                 <Link to={items.id}>{items.title}</Link>
               </li>
             ))}
+            <li className="navbar__items">
+              <Link onClick={connectWalletHandler}>Connect Wallet</Link>
+
+              {/* {connectWallet} */}
+            </li>
           </ul>
         </nav>
       </div>

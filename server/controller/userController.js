@@ -13,8 +13,17 @@ const addUser = async (req, res) => {
     res.status(201).json(newUser);
   } catch (error) {
     res.status(409).json({ message: error.message });
-    console.log("");
   }
 };
 
-module.exports = { addUser };
+const getUser = async (req, res) => {
+  console.log("get user");
+  try {
+    const user = await User.findOne({});
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(409).json({ message: error.message });
+  }
+};
+
+module.exports = { addUser, getUser };
