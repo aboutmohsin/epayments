@@ -7,6 +7,10 @@ const userSchema = mongoose.Schema({
   phoneNo: String,
   email: String,
 });
+
+autoIncrement.initialize(mongoose.connection);
+userSchema.plugin(autoIncrement.plugin, "user");
+
 const user = mongoose.model("userPayment", userSchema);
 
 module.exports = user;
