@@ -57,7 +57,13 @@
 .ether_icon {
   margin: 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}.ether_icon>button{
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
 }
 .balnace_details {
   display: flex;
@@ -65,13 +71,13 @@
   margin: 2rem;
 }
 .account__title > p {
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
   text-transform: uppercase;
   margin: 1rem 0;
   /* font-weight: bold; */
 }
 .account__details > p {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   text-transform: uppercase;
   margin: 1rem 0;
 

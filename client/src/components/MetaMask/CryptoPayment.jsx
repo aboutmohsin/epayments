@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./CryptoPayment.css";
+import { ethers } from "ethers";
 import { FaEthereum } from "react-icons/fa";
 const CryptoPayment = () => {
   const [input, setInput] = useState({});
   const [defaultAccount, setDefaultAccount] = useState("Account Address");
-  const [userBalance, setUserBalance] = useState("0.00 ETH");
-  const [connButtonText, setConnButtonText] = useState("SEND NOW");
+  const [userBalance, setUserBalance] = useState("0.00 ");
+  const [connButtonText, setConnButtonText] = useState("Connet Wallet");
   const [errorMessage, setErrorMessage] = useState(null);
 
   const onChangeValue = (e) => {
@@ -14,7 +15,7 @@ const CryptoPayment = () => {
   };
   const accountChangeHandler = (newAccount) => {
     setDefaultAccount(newAccount);
-    // getUserBalance(newAccount);
+    getUserBalance(newAccount.toString());
   };
   const getUserBalance = (address) => {
     window.ethereum
@@ -34,6 +35,7 @@ const CryptoPayment = () => {
       setErrorMessage("Install MetaMasks");
     }
   };
+  window.ethereum.on("accountChange", accountChangeHandler);
   return (
     <section className="form_sections">
       <div className="container">
@@ -69,10 +71,10 @@ const CryptoPayment = () => {
                 <button onClick={connectWalletHandler}>{connButtonText}</button>
               </div>
             </form>
-
             <div className="balance_card">
               <div className="ether_icon">
                 <FaEthereum size={60} />
+                <button onClick={connectWalletHandler}>{connButtonText}</button>
               </div>
               <div className="balnace_details">
                 <div className="account__title">
@@ -83,7 +85,7 @@ const CryptoPayment = () => {
                   {/* <p>0x1232....89</p> */}
                   <p>{defaultAccount}</p>
                   {/* <p>1.23 ETH</p> */}
-                  <p>{userBalance}</p>
+                  <p>{userBalance} ETH</p>
                 </div>
               </div>
             </div>
@@ -92,17 +94,6 @@ const CryptoPayment = () => {
         <div className="metamask_error">{errorMessage}</div>
 
         {/* <Instruction /> */}
-      </div>
-      <div className="wall-card">
-        <h4>Connection to MetaMask using window.etherum</h4>
-        <button onClick={connectWalletHandler}>{connButtonText}</button>
-        <div className="accountDisplay">
-          <h3> Address:{defaultAccount}</h3>
-        </div>
-        <div className="balanceDisplay">
-          <h3>Balance: {userBalance}</h3>
-        </div>
-        {errorMessage}
       </div>
     </section>
   );
