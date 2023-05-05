@@ -2,7 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Form from "./components/Form/Form";
 import NavBar from "./components/NavBar/NavBar";
 import EasyPaisa from "./components/EasyPaisa/EasyPaisa";
-import MetaMask from "./components/MetaMask/MetaMask";
+// import MetaMask from "./components/MetaMask/MetaMask";
+import CryptoPayment from "./components/MetaMask/CryptoPayment";
 function App() {
   return (
     <>
@@ -11,7 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Form />} />
         <Route path="easypaisa" element={<EasyPaisa />} />
-        <Route path="metamask" element={<MetaMask />} />
+        <Route path="crypto" element={<CryptoPayment />} />
+        {/* <Route path="metamask" element={<MetaMask />} /> */}
       </Routes>
     </>
   );

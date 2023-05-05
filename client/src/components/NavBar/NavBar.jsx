@@ -11,10 +11,10 @@ const NavBar = () => {
       id: "/easypaisa",
       title: "EasyPaisa",
     },
-    // {
-    //   id: "/metamask",
-    //   title: "MetaMask",
-    // },
+    {
+      id: "/crypto",
+      title: "Crypto Payment",
+    },
   ];
   const [connectWallet, setConnectWallet] = useState("MetaMask");
   const connectWalletHandler = () => {

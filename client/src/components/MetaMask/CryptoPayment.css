@@ -1,0 +1,92 @@
+.form__cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 10px;
+  align-items: center;
+}
+
+.crypto_form {
+  margin: 20px 0;
+}
+.crypto_form__control > input {
+  /* padding: 10px 40px; */
+  width: 50rem;
+  height: 4rem;
+  margin: 1rem 0;
+  /* border: none; */
+  padding: 2rem;
+
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: start;
+}
+.crypto_form__control > input::placeholder {
+  text-align: start;
+  color: rebeccapurple;
+}
+.crypto_form__control > textarea {
+  /* padding: 10px 48px; */
+  height: 15rem;
+  width: 50rem;
+  padding: 2rem;
+  font-size: 15px;
+
+  border-radius: 10px;
+}
+.crypto_form__control > button {
+  width: 50rem;
+  height: 4rem;
+  margin: 2rem 0;
+  border-radius: 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background: cornflowerblue;
+  border: none;
+  cursor: pointer;
+}
+.balance_card {
+  background: rgba(74, 144, 226, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 40%;
+  height: 40%;
+}
+.ether_icon {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.balnace_details {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+}
+.account__title > p {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  /* font-weight: bold; */
+}
+.account__details > p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 1rem 0;
+
+  /* font-weight: bold; */
+}
+@media (max-width: 1024px) {
+  .form__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .balance_card {
+    width: 60%;
+  }
+}
+.metamask_error {
+  font-size: 15px;
+  color: red !important;
+}
