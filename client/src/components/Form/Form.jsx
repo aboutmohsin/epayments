@@ -19,7 +19,7 @@ const Form = () => {
   return (
     <section className="form_sections">
       <div className="container">
-        <div className="forms">
+        <div className="payments_forms">
           <h1>Who's checking in</h1>
 
           <form action="/">
@@ -28,7 +28,7 @@ const Form = () => {
                 <label htmlFor="">First Name</label>
                 <input
                   type="text"
-                  pattern="[Aa-zZ]"
+                  // pattern="[Aa-zZ]"
                   // color="red"
                   name="firstName"
                   placeholder="john"

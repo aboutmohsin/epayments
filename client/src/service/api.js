@@ -16,3 +16,17 @@ export const getUser = async () => {
     console.log(`Error while using get user Api: `, error);
   }
 };
+export const createPost = async (newImage) => {
+  try {
+    return await axios.post(`${URL}/upload`, newImage);
+  } catch (error) {
+    console.log(`Error while using createPost Api: `, error);
+  }
+};
+export const getPost = async () => {
+  try {
+    return await axios.get(`${URL}/getimage`);
+  } catch (error) {
+    console.log(`Error while using get image Api: `, error);
+  }
+};

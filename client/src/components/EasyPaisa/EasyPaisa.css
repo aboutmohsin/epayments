@@ -5,6 +5,7 @@
   background: #fff;
   /* box-shadow: 0 0 15px 0 #3263cd; */
   box-shadow: 0 0 15px 0 #7e8083;
+  /* background: red; */
   margin-bottom: 2rem;
 }
 .booking_details > h1 {
@@ -58,4 +59,7 @@
   padding: 0.5rem;
   border-radius: 5px;
   width: 30%;
+}
+.upload_image > img {
+  width: 40%;
 }

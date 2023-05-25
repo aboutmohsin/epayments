@@ -15,6 +15,14 @@ const NavBar = () => {
       id: "/crypto",
       title: "Crypto Payment",
     },
+    {
+      id: "/payments",
+      title: "Payment Details",
+    },
+    {
+      id: "/search",
+      title: "Search Hotels",
+    },
   ];
   const [connectWallet, setConnectWallet] = useState("MetaMask");
   const connectWalletHandler = () => {

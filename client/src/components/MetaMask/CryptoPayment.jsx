@@ -5,7 +5,7 @@ import { FaEthereum } from "react-icons/fa";
 const CryptoPayment = () => {
   const [input, setInput] = useState({});
   const [defaultAccount, setDefaultAccount] = useState("Account Address");
-  const [userBalance, setUserBalance] = useState("0.00 ");
+  const [userBalance, setUserBalance] = useState("0.00");
   const [connButtonText, setConnButtonText] = useState("Connet Wallet");
   const [errorMessage, setErrorMessage] = useState(null);
 
@@ -22,6 +22,7 @@ const CryptoPayment = () => {
       .request({ method: "eth_getBalance", params: [address, "latest"] })
       .then((balance) => {
         setUserBalance(ethers.utils.formatEther(balance));
+        console.log("User Balance:", userBalance);
       });
   };
   const connectWalletHandler = () => {
@@ -39,10 +40,22 @@ const CryptoPayment = () => {
   return (
     <section className="form_sections">
       <div className="container">
-        <div className="forms">
+        <div className="payments_forms">
           <h1>Who's checking in</h1>
           <div className="form__cards">
             <form action="" className="crypto_form">
+              <div
+                className="crypto_form__control "
+                id="address_to"
+                onChange={(e) => onChangeValue(e)}
+              >
+                <input
+                  type="text"
+                  name="addressFrom"
+                  placeholder="Address From"
+                  value={defaultAccount}
+                />
+              </div>
               <div
                 className="crypto_form__control "
                 id="address_to"

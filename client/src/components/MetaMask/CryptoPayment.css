@@ -53,17 +53,19 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   width: 40%;
   height: 40%;
+  overflow: hidden;
 }
 .ether_icon {
   margin: 2rem;
   display: flex;
   justify-content: space-between;
-}.ether_icon>button{
-    font-size: 15px;
-    padding: 5px 10px;
-    border-radius: 10px;
-    border: none;
-    font-weight: bold;
+}
+.ether_icon > button {
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
 }
 .balnace_details {
   display: flex;

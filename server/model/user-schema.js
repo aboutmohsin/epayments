@@ -6,11 +6,12 @@ const userSchema = mongoose.Schema({
   secondName: String,
   phoneNo: String,
   email: String,
+  myFile: String,
 });
 
 // autoIncrement.initialize(mongoose.connection);
 // userSchema.plugin(autoIncrement.plugin, "userpayment");
 
-const user = mongoose.model("userpayment", userSchema);
+const User = mongoose.model("userpayment", userSchema);
 
-module.exports = user;
+module.exports = User;

@@ -14,9 +14,13 @@ dotenv.config();
 Connection();
 
 //Routes
-app.use(bodyParser.json({ extended: true }));
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json({ extended: true }));
+// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json({ limit: "105mb" }));
+app.use(express.urlencoded({ limit: "105mb" }));
+// app.use(express.limit(100000000));
 
+// console.log("Limit file size: " + limit);
 // app.use(
 //   cors({
 //     origin: "http://localhost:5173",
@@ -24,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //   })
 // );
 app.use(cors());
-app.options("*", cors());
+// app.options("*", cors());
 app.use("/", Router);
 
 const PORT = process.env.PORT || 8080;

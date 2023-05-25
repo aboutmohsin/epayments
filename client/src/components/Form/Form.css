@@ -1,12 +1,13 @@
-.forms {
-  width: 100%;
+.payments_forms {
+  width: 50;
   padding: 2rem;
   border-radius: 6px;
   background: #fff;
   /* box-shadow: 0 0 15px 0 #3263cd; */
   box-shadow: 0 0 15px 0 #7e8083;
+  margin: 5rem;
 }
-.forms > h1 {
+.payments_forms > h1 {
   padding: 2rem 0;
   font-size: 3rem;
   border-bottom: 2px solid gray;
