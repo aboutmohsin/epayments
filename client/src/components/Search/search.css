@@ -1,0 +1,44 @@
+.search_hotels {
+  text-align: center;
+}
+.search_fields > input {
+  /* padding: 1rem 10rem; */
+  width: 50rem;
+  height: 4rem;
+  font-size: 2rem;
+}
+.search_card {
+  width: 100%;
+  /* align-items: center; */
+  padding: 2rem;
+  border-radius: 6px;
+  background: #fff;
+  /* box-shadow: 0 0 15px 0 #3263cd; */
+  box-shadow: 0 0 15px 0 #7e8083;
+  /* background: red; */
+  margin: 3rem;
+}
+.hotel_image {
+  width: 30%;
+}
+.hotel_details {
+  display: flex;
+  /* justify-content: space-between;
+     */
+}
+.hotel_description {
+  margin-left: 4rem;
+}
+.btn-hotel{
+    margin-left: 55rem;
+}
+.hotel_location,
+.hotel_feature,
+.hotel_price,
+.number_of_rooms {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+.hotel_feature {
+  /* width: 40%; */
+}

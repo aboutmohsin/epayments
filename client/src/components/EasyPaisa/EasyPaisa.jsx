@@ -59,7 +59,7 @@ const EasyPaisa = () => {
         </div>
         <div className="easypaisa_cards">
           <div className="qr_code">
-            <img src="./images/qrcode.webp" alt="" />
+            <img src="./images/QRCODE.jpg" alt="" />
           </div>
           <div className="payment__screenshot">
             <form
